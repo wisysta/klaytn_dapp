@@ -32,6 +32,18 @@ contract MintGemToken is ERC721Enumerable {
         string memory gemTokenType = String.toString(
             gemTokenData[_tokenId].gemTokenType
         );
+
+        return
+            string(
+                abi.encodePacked(
+                    metadataURI,
+                    "/",
+                    gemTokenRank,
+                    "/",
+                    gemTokenType,
+                    ".json"
+                )
+            );
     }
 
     function mintGemToken() public {
