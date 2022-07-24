@@ -48,7 +48,7 @@ contract MintGemToken is ERC721Enumerable {
 
     function mintGemToken() public {
         uint256 tokenId = totalSupply() + 1;
-
+        gemTokenData[tokenId] = GemTokenData(1, 1);
         _mint(msg.sender, tokenId);
     }
 }
