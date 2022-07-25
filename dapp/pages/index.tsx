@@ -4,7 +4,7 @@ import { useAccount } from '../hooks';
 import { useEffect } from 'react';
 
 const Home: NextPage = () => {
-    const account = useAccount();
+    const { account } = useAccount();
 
     useEffect(() => {
         console.log(account);
